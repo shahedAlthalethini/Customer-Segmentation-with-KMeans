@@ -1,6 +1,6 @@
 # Customer-Segmentation-with-KMeans
 
-
+![Uploading image.png…]()
 
 ---
 
