@@ -16,23 +16,23 @@
 *   [Conclusion](#-conclusion)
 *   [How to Use](#-how-to-use)
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates the application of unsupervised machine learning to solve a common business problem: customer segmentation. By analyzing customer data, we can uncover hidden patterns and group customers into meaningful segments.
 
-### 🎯 Goal
+### Goal
 The primary goal is to segment customers of an FMCG company into distinct groups based on their demographic and behavioral data. This will enable the marketing department to develop targeted and effective campaigns, ultimately increasing ROI and customer satisfaction.
 
-### 👤 Role
+### Role
 As a Data Scientist, my role is to process and analyze the customer dataset, apply appropriate clustering algorithms, interpret the resulting segments, and provide actionable insights to the marketing team.
 
-### 챌린지 (Challenges)
+### Challenges
 *   **Determining Optimal Clusters:** Identifying the correct number of customer segments (`k`) is a critical and often subjective task.
 *   **Interpreting Segments:** Once clusters are formed, the challenge is to analyze their characteristics to create meaningful and actionable "personas" for each group.
 *   **High-Dimensional Data:** With multiple features, visualizing the clusters is difficult. We need a way to reduce dimensions without losing significant information.
 *   **Feature Scaling:** Algorithms like K-Means are sensitive to the scale of the data. Features like `Income` can disproportionately influence the result if not handled correctly.
 
-## 💡 Introduction — What is Customer Segmentation?
+## Introduction — What is Customer Segmentation?
 
 Let’s say you decided to buy a t-shirt from a brand online. Have you ever thought about who else bought the same t-shirt?
 
@@ -46,7 +46,7 @@ We actually try to find and group customers based on common characteristics such
 
 Let’s dive into our segmentation project!
 
-## 🏢 Business Scenario
+## Business Scenario
 
 Suppose we are working as a data scientist for an FMCG company and want to segment our customers to help the marketing department launch new products and sales based on the segmentation. Therefore, we will save our time and money by marketing a specific group of customers with selected products.
 
@@ -56,7 +56,7 @@ All data has been collected through the loyalty cards customers use at checkout.
 
 We will utilize K-Means and PCA algorithms for this project and see how we define new grouped customers!
 
-## 📊 Explore the Dataset
+## Explore the Dataset
 
 Understanding the data is important! Before starting any project, we need to understand the business problem and the dataset first. Let’s see the variables (features) in the dataset.
 
@@ -71,14 +71,14 @@ Understanding the data is important! Before starting any project, we need to und
 | **Occupation** | Category of occupation. `0: unemployed/unskilled`, `1: skilled`, `2: management/highly qualified`. |
 | **Settlement size** | The size of the city the customer lives in. `0: small`, `1: mid-sized`, `2: big city`. |
 
-## 🧹 Data Preprocessing
+## Data Preprocessing
 
 To prepare the data for our K-Means model, we performed the following preprocessing steps:
 
 1.  **Dropping Unnecessary Columns:** The `ID` column was removed as it is a unique identifier and provides no value for clustering.
 2.  **Feature Scaling:** Since K-Means is a distance-based algorithm, it's crucial to scale our features. We used `StandardScaler` from scikit-learn to standardize the data, ensuring that features with large ranges (like `Income`) do not dominate the clustering process. Each feature was transformed to have a mean of 0 and a standard deviation of 1.
 
-## 🧠 K-Means for Segmentation
+## K-Means for Segmentation
 
 K-Means is an iterative algorithm that partitions a dataset into a pre-determined number of non-overlapping subgroups (clusters), where each data point belongs to only one group.
 
@@ -91,7 +91,7 @@ K-Means is an iterative algorithm that partitions a dataset into a pre-determine
     *   **Cluster 2: "Young & Ambitious"** - Younger, single, educated but with lower-to-mid-range incomes. High potential for future growth.
     *   **Cluster 3: "Well-Off"** - The highest income and education group, often married, and living in larger cities.
 
-## 📈 PCA with K-Means for Better Visualization
+## PCA with K-Means for Better Visualization
 
 Our dataset has 7 dimensions, making it impossible to visualize directly. To solve this, we used **Principal Component Analysis (PCA)**.
 
@@ -99,10 +99,9 @@ PCA is a dimensionality reduction technique that transforms the data into a new 
 
 By plotting these two components on a scatter plot and coloring each point according to its assigned cluster, we can visually confirm the effectiveness of our segmentation. The plot clearly shows four distinct, well-separated groups.
 
-![PCA Scatter Plot](images/pca_plot.png)
-*(Note: Add your visualization to an `images` folder in the repository and uncomment the line above)*
 
-## ✅ Conclusion
+
+## Conclusion
 
 This project successfully segmented customers into four distinct, actionable groups using K-Means clustering. By leveraging these insights, the FMCG company can now move away from a "one-size-fits-all" marketing approach.
 
