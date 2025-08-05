@@ -1,6 +1,8 @@
 # Customer-Segmentation-with-KMeans
 
-https://www.dannidanliu.com/content/images/2024/07/Blog-83--Customer-Segmentation-1.jpg
+
+![Customer Segmentation](https://www.dannidanliu.com/content/images/2024/07/Blog-83--Customer-Segmentation-1.jpg)
+
 
 ---
 
