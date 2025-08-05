@@ -113,7 +113,7 @@ This project successfully segmented customers into four distinct, actionable gro
 
 This data-driven approach allows for more efficient allocation of marketing resources, leading to higher campaign effectiveness and stronger customer relationships.
 
-## 🚀 How to Use
+## How to Use
 
 To replicate this analysis, follow these steps:
 
